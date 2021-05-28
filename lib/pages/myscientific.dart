@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import "dart:convert";
 import "dart:math";
 
 class Myscientific extends StatefulWidget {
@@ -96,7 +95,6 @@ class _MyscientificState extends State<Myscientific> {
       } else if (btnval == "x!") {
         history = ("$fnum!").toString();
         output = facto(fnum).toStringAsFixed(2);
-        //output = "$fact".toString();
       } else {
         otp = btnval;
         output = "";
@@ -114,10 +112,7 @@ class _MyscientificState extends State<Myscientific> {
 
       fnum = 0;
       snum = 0;
-      //otp = "";
     } else {
-      //history = fnum.toString() + otp.toString() + snum.toString();
-
       output = output + btnval;
     }
     print(output);
@@ -127,100 +122,6 @@ class _MyscientificState extends State<Myscientific> {
       result = output;
     });
   }
-  //   if (btnval == "C") {
-  //     equationFontSize = 30.0;
-  //     resultFontSize = 50.0;
-  //     otp = "";
-  //     output = "";
-  //     history = "";
-  //     fnum = 0;
-  //     snum = 0;
-  //   } else if (btnval == ".") {
-  //     if (output.contains(".")) {
-  //       print("already present .");
-  //       return;
-  //     } else {
-  //       output = output + btnval;
-  //     }
-  //   } else if (btnval == "<") {
-  //     equationFontSize = 50.0;
-  //     resultFontSize = 30.0;
-  //     output = output.substring(0, output.length - 1);
-  //     if (output == "") {
-  //       output = "0";
-  //     }
-  //   } else if (btnval == "sin" ||
-  //       btnval == "cos" ||
-  //       btnval == "x^2" ||
-  //       btnval == "x^3" ||
-  //       btnval == "log" ||
-  //       btnval == "tan" ||
-  //       btnval == "log" ||
-  //       btnval == "sqrt" ||
-  //       btnval == "cub" ||
-  //       btnval == "x^y" ||
-  //       btnval == "lo") {
-  //     equationFontSize = 50.0;
-  //     resultFontSize = 30.0;
-  //     fnum = double.parse(result);
-
-  //     if (btnval == "x^2") {
-  //       history = (" $fnum ^ 2").toString();
-  //       output = (fnum * fnum).toStringAsFixed(3);
-  //     } else if (btnval == "x^3") {
-  //       history = (" $fnum ^ 3").toString();
-  //       output = (fnum * fnum * fnum).toString();
-  //     } else if (btnval == "log") {
-  //       history = ("log($fnum)").toString();
-  //       output = (log(fnum) / 2.302585092994046).toString();
-  //     } else if (btnval == "tan") {
-  //       history = ("tan($fnum)").toString();
-  //       double e = 180 / pi;
-  //       output = (tan(fnum)).toString();
-  //     } else if (btnval == "sin") {
-  //       history = ("sin($fnum)").toString();
-  //       double e = 180 / pi;
-  //       output = (sin(fnum)).toString();
-  //     } else if (btnval == "cos") {
-  //       history = ("cos($fnum)").toString();
-  //       double e = 180 / pi;
-  //       output = (cos(fnum)).toString();
-  //     } else if (btnval == "sqrt") {
-  //       history = ("sqrt($fnum)").toString();
-  //       double e = 180 / pi;
-  //       output = sqrt(fnum).toString();
-  //     } else if (btnval == "tan") {
-  //       history = (" $fnum ^2").toString();
-  //       double e = 180 / pi;
-  //       output = (tan(fnum)).toString();
-  //     } else {
-  //       otp = btnval;
-  //       output = "";
-  //     }
-  //   }
-  //   if (btnval == "=") {
-  //     snum = double.parse(result);
-  //     if (otp == "x^y") {
-  //       // history = ("$fnum ^ ").toString();
-  //       output = pow(fnum, snum).toStringAsFixed(3);
-  //       //history = fnum.toString() + otp.toString() + snum.toString();
-  //     }
-
-  //     fnum = 0;
-  //     snum = 0;
-  //     otp = "";
-  //   } else {
-  //     //history = fnum.toString() + otp.toString() + snum.toString();
-
-  //     output = output + btnval;
-  //   }
-  //   print(output);
-  //   setState(() {
-  //     equationFontSize = 30.0;
-  //     resultFontSize = 50.0;
-  //     result = output;
-  //   });
-  // }
 
   Widget button(
       String btnval, Color btnbor, Color valcol, Color btncol, double fsize) {
