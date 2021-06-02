@@ -25,12 +25,12 @@ class _MyconvertState extends State<Myconvert> {
             IconButton(
                 icon: Icon(Icons.calculate_outlined, color: Colors.red),
                 onPressed: () async {
-                  Navigator.pushNamed(context, "calculator");
+                  Navigator.pushReplacementNamed(context, "calculator");
                 }),
             IconButton(
                 icon: Icon(Icons.science, color: Colors.red),
                 onPressed: () async {
-                  Navigator.pushNamed(context, "scientific");
+                  Navigator.pushReplacementNamed(context, "scientific");
                 }),
           ],
         ),

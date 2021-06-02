@@ -10,6 +10,16 @@ class Mycal extends StatefulWidget {
 }
 
 class _MycalState extends State<Mycal> {
+  var currentFocus;
+
+  unfocus() {
+    currentFocus = FocusScope.of(context);
+
+    if (!currentFocus.hasPrimaryFocus) {
+      currentFocus.unfocus();
+    }
+  }
+
   //String equation = "";
   double equationFontSize = 50.0;
   String history = "";
@@ -188,12 +198,12 @@ class _MycalState extends State<Mycal> {
           IconButton(
               icon: Icon(Icons.science_outlined, color: Colors.red),
               onPressed: () async {
-                Navigator.pushNamed(context, "scientific");
+                Navigator.pushReplacementNamed(context, "scientific");
               }),
           IconButton(
               icon: Icon(Icons.swipe, color: Colors.red),
               onPressed: () async {
-                Navigator.pushNamed(context, "convert");
+                Navigator.pushReplacementNamed(context, "convert");
               }),
         ],
       ),

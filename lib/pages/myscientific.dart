@@ -158,12 +158,12 @@ class _MyscientificState extends State<Myscientific> {
           IconButton(
               icon: Icon(Icons.calculate_outlined, color: Colors.red),
               onPressed: () async {
-                Navigator.pushNamed(context, "calculator");
+                Navigator.pushReplacementNamed(context, "calculator");
               }),
           IconButton(
               icon: Icon(Icons.swipe, color: Colors.red),
               onPressed: () async {
-                Navigator.pushNamed(context, "convert");
+                Navigator.pushReplacementNamed(context, "convert");
               }),
         ],
       ),
